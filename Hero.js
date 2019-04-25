@@ -1,6 +1,9 @@
 var Hero = function(){
     this.hp=100;
     this.mp=50;
+    this.x=400;
+    this.y=400;
+    
   }
   
   Hero.prototype.greeting = function(){

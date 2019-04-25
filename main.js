@@ -10,3 +10,4 @@ $('#enemyAttack').click(function() {
 $('#heroAttack').click(function() {
   john.attack(slime);
 })
+
