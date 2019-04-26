@@ -11,6 +11,7 @@ var app=new Vue({
       ene_height:100,
     },
     created:function(){
+    var collision = new collision();
       this.createMass()
       this.updateSVG()
       this.updateEnemy()
@@ -27,14 +28,10 @@ var app=new Vue({
         console.log('Down');
       },
       Right:function(event){
-        if(this.x==400){
-            console.log('いけません')
-        }else{
         this.x=this.x+100;
         this.updateSVG()
         console.log('Up');
-        }
-      },
+        },
       Left:function(event){
         this.x=this.x-100;
         this.updateSVG()
@@ -52,7 +49,7 @@ var app=new Vue({
     	      svg.setAttribute("stroke-width", 5);
     	      svg.setAttribute("width",100);
               svg.setAttribute("height",100);
-              if(i==5){
+              if(!Collider[i][j]){
                 svg.setAttribute("fill", "white");
               }else{
                 svg.setAttribute("fill", "yellow");
